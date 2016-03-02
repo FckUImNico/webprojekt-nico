@@ -1,0 +1,23 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #A05F5F;
+}
+.jumbotron
+{
+    background-color:#F5D76E; /*A05F5F (rot)*/
+   /* padding: 10cm;
+    padding-top: 11cm;
+    padding-bottom: 11cm; */
+    padding: 20%;
+    text-align: center;
+
+}
+.container{
+    text-align: center;
+    padding: 20%;
+  /*  padding: 10cm;
+    padding-top: 11cm;
+    padding-bottom: 11cm; */
+}
+
+

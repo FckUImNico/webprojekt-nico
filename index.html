@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>You got a minute?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I don't know.">
+    <meta name="author" content="Nico Pfeiffer">
+   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="font.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700' rel='stylesheet' type='text/css'>
+    <script src="ownScipt.js"></script>
+
+</head>
+
+<body>
+
+<a name="main" ></a>
+<div class="jumbotron" id="backg">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top text-left"
+         role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#main">You got a minute?</a>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#calendar">Kalender</a>
+                </li>
+                <li>
+                    <a href="#new">Neuer Termin</a>
+                </li>
+                <li>
+                    <a class="#search"><input class="form-control pull-right" type="text" value="" id="datetimepicker" /><br><br></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom text-left"
+         role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+    </nav>
+    <h1>
+        Nico doesn't has time for sth. like that.
+        <br>
+    </h1>
+
+
+    <p>
+        Jeah fuck you!
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="#">Do NOT press.</a>
+    </p>
+</div> <!--
+<div class="jumbotron">
+    <h1>
+        Hello, World!
+    </h1>
+    <p>
+        This is the coolest!
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="#">Learn more</a>
+    </p>
+</div>-->
+<a name="home"></a>
+<div class="container">
+    <h1>
+        Nico is fucking busy right now.
+        <br>
+    </h1>
+
+
+    <p>
+        I said fuck you!
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="#">Don't press it.</a>
+    </p>
+</div>
+<a name="calendar"></a>
+<div class="jumbotron">
+
+    <h1>
+        Wow you are annoying.
+        <br>
+    </h1>
+
+
+    <p>
+        Well ...!
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="#">I dare you!</a>
+    </p>
+</div>
+<a name="new"></a>
+<div class="container">
+
+    <h1>
+        Okay.
+        <br>
+    </h1>
+
+
+    <p>
+        ...
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" onclick="function1()" >Press the fucking Button.</a>
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</div>
+</body>
+<script src="./jquery.js"></script>
+<script src="build/jquery.datetimepicker.full.js"></script>
+<script>/*
+ window.onerror = function(errorMsg) {
+ $('#console').html($('#console').html()+'<br>'+errorMsg)
+ }*/
+
+$.datetimepicker.setLocale('de');
+
+$('#datetimepicker_format').datetimepicker({value:'2015/04/15 05:03', format: $("#datetimepicker_format_value").val()});
+console.log($('#datetimepicker_format').datetimepicker('getValue'));
+
+$("#datetimepicker_format_change").on("click", function(e){
+    $("#datetimepicker_format").data('xdsoft_datetimepicker').setOptions({format: $("#datetimepicker_format_value").val()});
+});
+$("#datetimepicker_format_locale").on("change", function(e){
+    $.datetimepicker.setLocale($(e.currentTarget).val());
+});
+
+$('#datetimepicker').datetimepicker({
+    dayOfWeekStart : 1,
+    lang:'en',
+    disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
+    startDate:	'2014/05/28'
+});
+$('#datetimepicker').datetimepicker({value:'',step:10}); //2014/05/28 04:20
+
+$('.some_class').datetimepicker();
+
+
+</script>
+
+</html>
