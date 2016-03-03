@@ -37,7 +37,7 @@
                     <a href="#new">Neuer Termin</a>
                 </li>
                 <li>
-                    <a class="#search"><input class="form-control pull-right" type="text" value="" id="datetimepicker" /><br><br></a>
+                    <a class="#search"><input class="form-control pull-right" type="text" value="" onkeyup="clickerfunc2()" onchange="clickerfunc2()" onclick="clickerfunc()" id="datetimepicker" /><br><br></a>
                 </li>
             </ul>
         </div>
@@ -50,7 +50,7 @@
             </ul>
         </div>
     </nav>
-    <h1>
+    <h1 id="test1">
         Nico doesn't has time for sth. like that.
         <br>
     </h1>
@@ -102,8 +102,10 @@
         Well ...!
     </p>
     <p>
-        <a class="btn btn-primary btn-lg" href="#">I dare you!</a>
+        <a class="btn btn-primary btn-lg" onclick="clickerfunc()" href="#">I dare you!</a>
     </p>
+
+    <p id="demo3"></p>
 </div>
 <a name="new"></a>
 <div class="container">
@@ -148,12 +150,25 @@ $('#datetimepicker').datetimepicker({
     dayOfWeekStart : 1,
     lang:'en',
     disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
-    startDate:	'2014/05/28'
+    startDate:	'xsoft_today'
 });
-$('#datetimepicker').datetimepicker({value:'',step:10}); //2014/05/28 04:20
+$('#datetimepicker').datetimepicker({value:'xsoft_today',step:10}); //2014/05/28 04:20
 
 $('.some_class').datetimepicker();
+console.log($('#datetimepicker'));
 
+    function clickerfunc () {
+                                            //console.log($('#datetimepicker').val());
+        var x = $('#datetimepicker').val();
+        $('demo3').innerHTML = x;
+    }
+
+    function clickerfunc2 (){
+
+        console.log($("test1"));
+        $("test1").html("Kartoffel");
+        document.getElementById("test1").innerHTML = $('#datetimepicker').val();
+    }
 
 </script>
 

@@ -7,3 +7,5 @@ function function1(){
     document.getElementById("demo").innerHTML = x;
     document.getElementById("demo2").innerHTML = y;
 }
+
+
